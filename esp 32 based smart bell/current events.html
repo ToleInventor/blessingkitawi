@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Bell Events Viewer</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .refresh-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .event-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            position: relative;
+        }
+        .event-type {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .normal {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+        .special {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+        .event-time {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .event-detail {
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .detail-label {
+            font-weight: bold;
+            color: #7f8c8d;
+        }
+        .detail-value {
+            color: #2c3e50;
+        }
+        .last-updated {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-align: right;
+            margin-top: 20px;
+        }
+        #loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        #error {
+            color: #e74c3c;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ESP32 Bell Events</h1>
+            <button class="refresh-btn" id="refreshBtn">Refresh Events</button>
+        </div>
+        
+        <div id="loading">Loading events...</div>
+        <div id="error"></div>
+        
+        <div id="eventsContainer" class="events-container">
+            <!-- Events will be loaded here -->
+        </div>
+        
+        <div class="last-updated" id="lastUpdated">
+            Last updated: Not yet loaded
+        </div>
+    </div>
+
+    <script src="currentEvents.js">
+    </script>
+</body>
+</html>

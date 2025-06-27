@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMART BELL SYSTEM|ADD NEW EVENT</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+<div class="header">
+    <div id="current-time" class="time"></div> 
+    <script src="./scripts/updateTime.js">
+    </script>           
+    <div class="header"> BELL SYSTEM|ADD NEW EVENT </div> 
+    <label for="type">Event Type</label>
+    <select id="type_of_event">
+        <option>NORMAL EVENT</option>
+        <option>SPECIAL EVENT</option>
+    </select>
+  <div class="eventype">
+  <p>
+      Normal bell event
+  </p>
+  </div>
+  <label for="title" id="title">EVENT TITLE</label>
+  <input id="tile"></input>
+  <p>
+      <label for="time">
+          TIME
+      </label>
+      <input type=time id="time"></input>
+      </p>
+      <label for="delay">
+          Delay
+      </label>
+      <input type=number placeholder="delay time for the event in seconds" id="delay"></input>
+      <p>
+      <select id="days">
+          <option>
+              Weekdays
+          </option>
+          <option>
+              Weekends 
+          </option>
+          <option>
+              Some days
+          </option>
+          <option>
+              All days
+          </option>
+      </select>
+      </p>
+        <label for="tones">
+      Tone
+  </label>
+  <select id="tone">
+      <option>
+          Better days
+      </option>
+      <option>
+          Hello world
+      </option>
+  </select>
+      </p>
+    <div class="eventype">
+        <p>
+            Special event
+        </p> 
+    </div>
+  <label for="specialDate">
+      DATE
+  </label>
+  <input type=date id="specialDate"></input>
+  <p>
+      <label>
+          TIME
+      </label>
+      <input type=time id="specialTime" placeholder=""></input>
+  </p>
+  <p>
+      <label for="description">
+          description 
+      </label>
+      <input id="specialDescription" placeholder="enter description of the event and where it'll be held"></input>
+  </p>
+  <label for="tones">
+      Tone
+  </label>
+  <select id="specialTone">
+      <option>
+          Blessing
+      </option>
+      <option>
+          Good morning africa
+      </option>
+  </select>
+  <p>
+       
+  </p>
+    <center>
+        <button onClick="leaveSite()">MANAGE EVENTS</button>
+        <button onClick="saveEvent()">COMPLETE EVENT CREATION</button>
+        </center>
+    <center>
+        *keep in mind that once a special event bell rings, it never rings again, in fact, the event is deleted.
+    </center>
+    
+</div>
+
+<script src="./scripts/main.js">
+
+</script>
+</body>
+</html>
