@@ -1,26 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>ESP32 Event Scheduler</title>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div id="normal-events-list"></div>
-  <div id="special-events-list"></div>
-
-  <script>
-    // ✅ Unified Firebase compat setup
-    const firebaseConfig = {
-      apiKey: "AIzaSyDinvWHwLtRFGSY5_IBzJzbrhhDs4lOJeo",
-      authDomain: "electric-bell.firebaseapp.com",
-      projectId: "electric-bell",
-      storageBucket: "electric-bell.appspot.com",
-      messagingSenderId: "871235935211",
-      appId: "1:871235935211:web:fc4d97fd75a9020bae57ae",
-      measurementId: "G-L6CD8YBYPT"
-    };
+const firebaseConfig = {
+  apiKey: "AIzaSyDinvWHwLtRFGSY5_IBzJzbrhhDs4lOJeo",
+  authDomain: "electric-bell.firebaseapp.com",
+  projectId: "electric-bell",
+  storageBucket: "electric-bell.firebasestorage.app",
+  messagingSenderId: "871235935211",
+  appId: "1:871235935211:web:fc4d97fd75a9020bae57ae",
+  measurementId: "G-L6CD8YBYPT"
+};
 
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
@@ -191,6 +177,3 @@
       setInterval(updateEsp32Collection, 60000);      // Every 1 minute
       setInterval(checkPastSpecialEvents, 3600000);   // Every hour
     });
-  </script>
-</body>
-</html>
