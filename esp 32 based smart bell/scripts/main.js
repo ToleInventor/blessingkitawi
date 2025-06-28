@@ -1,11 +1,11 @@
     const firebaseConfig = {
-        apiKey: "AIzaSyDaOVJUtbGLJGfgN0WGuuvTRldnlot3VBA",
-        authDomain: "esp32bell-5a9f4.firebaseapp.com",
-        projectId: "esp32bell-5a9f4",
-        storageBucket: "esp32bell-5a9f4.appspot.com",
-        messagingSenderId: "180892066628",
-        appId: "1:180892066628:web:854f635cc3c01cd587ad11",
-        measurementId: "G-VZY3RR3P5H"
+      apiKey: "AIzaSyDinvWHwLtRFGSY5_IBzJzbrhhDs4lOJeo",
+      authDomain: "electric-bell.firebaseapp.com",
+      projectId: "electric-bell",
+      storageBucket: "electric-bell.appspot.com",
+      messagingSenderId: "871235935211",
+      appId: "1:871235935211:web:fc4d97fd75a9020bae57ae",
+      measurementId: "G-L6CD8YBYPT"
     };
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
