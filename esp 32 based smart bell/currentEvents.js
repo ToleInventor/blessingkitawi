@@ -1,11 +1,12 @@
 console.log("ready");
     const firebaseConfig = {
-      apiKey: "AIzaSyAn8Niz8Trv7_ynFYoSgRSg-qc41imBp4M",
-      authDomain: "sellers-and-buyers-app.firebaseapp.com",
-      projectId: "sellers-and-buyers-app",
-      storageBucket: "sellers-and-buyers-app.appspot.com",
-      messagingSenderId: "963493817350",
-      appId: "1:963493817350:web:78c16d24a8c7dd57582787"
+      apiKey: "AIzaSyDinvWHwLtRFGSY5_IBzJzbrhhDs4lOJeo",
+      authDomain: "electric-bell.firebaseapp.com",
+      projectId: "electric-bell",
+      storageBucket: "electric-bell.appspot.com",
+      messagingSenderId: "871235935211",
+      appId: "1:871235935211:web:fc4d97fd75a9020bae57ae",
+      measurementId: "G-L6CD8YBYPT"
     };
 
     // Initialize Firebase
