@@ -37,7 +37,8 @@ function updateEsp32Collection() {
                 db.collection("esp32").doc(`special_${doc.id}`).set({
                     time: event.time,
                     tone: event.tone,
-                    delay: 0
+                    delay: 10
+                    
                 });
             });
         });
