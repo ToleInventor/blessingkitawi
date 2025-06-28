@@ -24,6 +24,7 @@ function updateEsp32Collection() {
                     time: event.time,
                     tone: event.tone,
                     delay: event.delay || 0
+                    d: event.title
                 });
             });
         });
@@ -38,7 +39,7 @@ function updateEsp32Collection() {
                     time: event.time,
                     tone: event.tone,
                     delay: 10
-                    
+                    d: event.description
                 });
             });
         });
